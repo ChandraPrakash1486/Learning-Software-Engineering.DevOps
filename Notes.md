@@ -85,3 +85,57 @@ Version Control System(VCS), like Git, is a software tool that helps to track an
 Automated tests in CI are sets of pre-written instructions (code) that are executed automatically by the CI server or runner,like Github Actions, during or immediately after the build process to validate new code changes and the overall integrity of the application against predefined expectations and requirements.
 
 CI/CD is a specific whole topic that I'll cover in this journey.
+
+**3.Continuous Delivery/Deployment (CD):** Continuous Delivery (often abbreviated as CD) is a software development practice where changes to code are automatically built, tested, and prepared for release to a production environment. The core idea is to make software releases more frequent, reliable, and less risky.(it invloves human intervention for deployment)
+on the other hand,**Continuous Deployment (also often abbreviated as CD)** is an **_extension_** of Continuous Delivery. In Continuous Deployment, every change that passes automated tests is automatically deployed to the production environment, without any manual intervention.(it does not require human intervention for deployment of the code changes)
+
+**Continuous Delivery is a prerequisite for Continuous Deployment**
+
+**4.Automated Tests:** Automated tests verify that our code behaves as expected and help catch bugs early in the development process. we write Automated Tests for our code, using frameworks appropriate for the programming, we are writing code in,like JUnit for Java or pytest for Python.
+Generally, you do not write your tests directly within the same file as your main application code. Keeping tests separate from application code promotes better organization and separation of concerns. This makes the codebase cleaner, easier to understand, and easier to maintain.
+
+**5. Infrastructure as Code (IaC):** Instead of manually configuring servers or using a web interface to provision resources, you describe your infrastructure using code in definition files.
+This allows you to treat your infrastructure in the same way you treat your application code. You can version, review, and reuse it, promoting repeatability and automation.
+
+**6. Monitoring and Logging:** Monitoring is the process of actively collecting, analyzing, and visualizing real-time or near real-time data about the performance, availability, and overall health of your systems and applications. It's about proactively observing your systems and identifying potential issues before they impact users.
+
+**What to Monitor:**
+
+**Infrastructure Metrics:** CPU utilization, memory usage, disk I/O, network traffic, load balancer performance, etc.
+
+**Application Metrics:** Request latency, error rates, response times, transaction volume, API performance, database performance, etc.
+
+**Business Metrics:** Number of active users, revenue generated, number of transactions, etc.
+
+**Custom Metrics:** Application-specific metrics relevant to business goals.
+
+Logging is the process of recording events, activities, and errors within your applications and systems. Logs are structured text records that provide a historical record of what has happened in the system.
+
+**What to Log:**
+
+**Application Events:** User actions, API requests, database queries, errors, exceptions, warnings.
+
+**System Events:** Startups, shutdowns, system errors, authentication attempts, resource allocation.
+
+**Security Events:**Login attempts, authorization failures, suspicious activity.
+
+**Audit Logs:** Tracking changes made by users to critical systems.
+
+**Application Errors:** Detailed information when the applications are not behaving normally.
+
+**7. Agile Project Management:** In essence, Agile is a way of approaching project management and software development that emphasizes flexibility, collaboration, and iterative progress. It's a departure from traditional, rigid approaches like Waterfall, and it's widely used in modern software development and other industries.
+
+### Cloud-Native Microservices and Containerization
+
+to understand, Microservice Architecture we should understand the Monolithic Architecture.
+
+Monothlithic is a Traditional Software Architecture, that is used in small organizations. in this architecture the complete application is developed as a single unit. All the functions and components are tightly coupled and packaged into one single deployable unit or codebase or repository. it is suitable for personal projects and small organizations.
+
+Microservice Architecture is a Modern Approach to software development. in this architecture the complete application is divided into multiple parts and units. these units or functions are independent to each other. i.e. each part of the application in developed individualy and thus it provided scaling and techology flexibility as the parts of the application can be developed in different technologies regardless of other part's tech stack.
+each part also has its independent codebase. each service or part is developed by separate team. each part of the application has a single job or function.
+the microservice archtecture is used for complex projects, where team is larger.
+
+### What is Cloud-Native Microservice
+Cloud-native microservices is the modern ***evolution*** of microservice architecture, designed specifically to thrive in cloud environments. they are built as small, independent services, packaged into containers, like Docker, and deployed onto cloud platforms, and leveraging container orchestration, like Kubernetes for dynamic scaling and management.
+xtends the microservice concept by embracing cloud computing platforms and practices to build scalable, resilient, and agile applications.
+
